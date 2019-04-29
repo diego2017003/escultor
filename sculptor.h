@@ -29,8 +29,8 @@ class Sculptor
         void cutSphere(int xcentro, int ycentro, int zcentro, float raio);
         void putEllipsoid(int xcentro, int ycentro, int zcentro, float rx, float ry, float rz);
         void cutEllipsoid(int xcentro, int ycentro, int zcentro, float rx, float ry, float rz);
-        void writeOFF();
-        void writeVECT();
+        void writeOFF(std::string A);
+        void writeVECT(std::string A);
 
 };
 
