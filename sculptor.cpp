@@ -1,10 +1,10 @@
 #include"sculptor.h"
-#include<cstring>
+#include<string>
 #include<iostream>
-//#include<new>
 #include<cmath>
-Voxel* Sculptor::AcessarElementoMatriz3D(int l,int c,int p){//Essa função auxilia no Acesso a um elemento especifico da Matriz
-return (this->v+(this->nx)*(this->ny)*p + l*(this->ny)+c);////o acesso a cada elemento da matriz é dado pela estrura *((nome da matriz)+nLinha*nColunas*)Coordenada Do Plano)+nColunas*(Coordena da linha no plano) + Coordenada da coluna)
+#include<fstream>
+Voxel* Sculptor::AcessarElementoMatriz3D(int l,int c,int p){//Essa funÃ§Ã£o auxilia no Acesso a um elemento especifico da Matriz
+return (this->v+(this->nx)*(this->ny)*p + l*(this->ny)+c);////o acesso a cada elemento da matriz Ã© dado pela estrura *((nome da matriz)+nLinha*nColunas*)Coordenada Do Plano)+nColunas*(Coordena da linha no plano) + Coordenada da coluna)
 }
 void Sculptor::testaEntrada(int &x,int &y,int &z){
     if(x>(this->nx - 1)){
@@ -181,5 +181,11 @@ void Sculptor::cutEllipsoid(int xcentro, int ycentro, int zcentro, float rx, flo
             }
         }
 }
-void Sculptor::writeOFF(std::string Arquivo);
-void Sculptor::writeVECT(std::string Arquivo);
+void Sculptor::writeVECT(){
+    std::ofstream Av;
+    Av.open("â€ªC:/Users/Cliente/Desktop/Escultor/av.txt");
+
+}
+void Sculptor::writeOFF(){
+}
+

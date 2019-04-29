@@ -1,8 +1,9 @@
 #ifndef SCULPTOR_H
 #define SCULPTOR_H
 #include<iostream>
-#include<cstring>
+#include<string>
 #include<cmath>
+#include<fstream>
 struct Voxel {
   float r,g,b; // Cores r=red g=green b=blue
   float t;//transparencia
@@ -28,8 +29,8 @@ class Sculptor
         void cutSphere(int xcentro, int ycentro, int zcentro, float raio);
         void putEllipsoid(int xcentro, int ycentro, int zcentro, float rx, float ry, float rz);
         void cutEllipsoid(int xcentro, int ycentro, int zcentro, float rx, float ry, float rz);
-        void writeOFF(std::string Arquivo);
-        void writeVECT(std::string Arquivo);
+        void writeOFF();
+        void writeVECT();
 
 };
 
