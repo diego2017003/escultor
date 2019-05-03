@@ -1,0 +1,144 @@
+\hypertarget{class_sculptor}{}\section{Sculptor Class Reference}
+\label{class_sculptor}\index{Sculptor@{Sculptor}}
+
+
+{\ttfamily \#include $<$sculptor.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sculptor_ae8db317044947a64e227530f6553afff}{Sculptor}} (int nx, int ny, int nz)
+\item 
+virtual \mbox{\hyperlink{class_sculptor_a8f159bf97458326f16d2e238e11be7ff}{$\sim$\+Sculptor}} ()
+\item 
+\mbox{\hyperlink{struct_voxel}{Voxel}} $\ast$ \mbox{\hyperlink{class_sculptor_a5b0f424bf802e5c29100621a7a15cab8}{Acessar\+Elemento\+Matriz3D}} (int l, int c, int p)
+\item 
+void \mbox{\hyperlink{class_sculptor_a26d31371c76e312b4c0da22fff69532e}{testa\+Entrada}} (int \&x, int \&y, int \&z)
+\item 
+void \mbox{\hyperlink{class_sculptor_af1d69da01379874b0dfd6454787cb562}{set\+Color}} (float r, float g, float b, float alpha)
+\item 
+void \mbox{\hyperlink{class_sculptor_a4bdea3048b419d58e93074060eaa7b52}{put\+Voxel}} (int x, int y, int z)
+\item 
+void \mbox{\hyperlink{class_sculptor_ad9d714a35fc8ae16d06eb5df37c3493c}{cut\+Voxel}} (int x, int y, int z)
+\item 
+void \mbox{\hyperlink{class_sculptor_a311ad7a0fb83fc67ac1f378be8e99fe1}{put\+Box}} (int x0, int x1, int y0, int y1, int z0, int z1)
+\item 
+void \mbox{\hyperlink{class_sculptor_aa84a1b12b09e9e103fc8d78f8d1bc00f}{cut\+Box}} (int x0, int x1, int y0, int y1, int z0, int z1)
+\item 
+void \mbox{\hyperlink{class_sculptor_a5c737846a84693fc3e30d61d34702fd1}{put\+Sphere}} (int xcentro, int ycentro, int zcentro, float raio)
+\item 
+void \mbox{\hyperlink{class_sculptor_ab407b7a2f58a224f3821ebf79830b34d}{cut\+Sphere}} (int xcentro, int ycentro, int zcentro, float raio)
+\item 
+void \mbox{\hyperlink{class_sculptor_aa776e7910c4fe68230c069bd35defb8f}{put\+Ellipsoid}} (int xcentro, int ycentro, int zcentro, float rx, float ry, float rz)
+\item 
+void \mbox{\hyperlink{class_sculptor_a88491290ab1943b70abb7304df3bb2a9}{cut\+Ellipsoid}} (int xcentro, int ycentro, int zcentro, float rx, float ry, float rz)
+\item 
+void \mbox{\hyperlink{class_sculptor_acec0c5904a80800d43038482a5f4d678}{write\+O\+FF}} (std\+::string A)
+\item 
+void \mbox{\hyperlink{class_sculptor_a4981868f3666b04c6b06eb166b1a92cf}{write\+V\+E\+CT}} (std\+::string A)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{class_sculptor}{Sculptor}} uma classe que projeta um conjunto de Voxels organizando-\/os para \char`\"{}esulpir\char`\"{} uma imagem. a classe pode esculpir caixas, esferas e elipsses a partir de voxels representados como cubos. bem como escrever as estruturas em arquivos \textquotesingle{}.off\textquotesingle{} ou \textquotesingle{}.vect\textquotesingle{}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sculptor_ae8db317044947a64e227530f6553afff}\label{class_sculptor_ae8db317044947a64e227530f6553afff}} 
+\index{Sculptor@{Sculptor}!Sculptor@{Sculptor}}
+\index{Sculptor@{Sculptor}!Sculptor@{Sculptor}}
+\subsubsection{\texorpdfstring{Sculptor()}{Sculptor()}}
+{\footnotesize\ttfamily Sculptor\+::\+Sculptor (\begin{DoxyParamCaption}\item[{int}]{nx = {\ttfamily 1},  }\item[{int}]{ny = {\ttfamily 1},  }\item[{int}]{nz = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+Construtor de objetos da classe sculptor, inicializa a matriz de voxels com todos desabilitados os valores de nx,ny,nz sao todos inicialmente 1 para caso algum valor não seja dado ao construtor. \mbox{\Hypertarget{class_sculptor_a8f159bf97458326f16d2e238e11be7ff}\label{class_sculptor_a8f159bf97458326f16d2e238e11be7ff}} 
+\index{Sculptor@{Sculptor}!````~Sculptor@{$\sim$Sculptor}}
+\index{````~Sculptor@{$\sim$Sculptor}!Sculptor@{Sculptor}}
+\subsubsection{\texorpdfstring{$\sim$Sculptor()}{~Sculptor()}}
+{\footnotesize\ttfamily Sculptor\+::$\sim$\+Sculptor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+destrutor de objetos da classe sculptor apaga a colecao de voxels 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sculptor_a5b0f424bf802e5c29100621a7a15cab8}\label{class_sculptor_a5b0f424bf802e5c29100621a7a15cab8}} 
+\index{Sculptor@{Sculptor}!AcessarElementoMatriz3D@{AcessarElementoMatriz3D}}
+\index{AcessarElementoMatriz3D@{AcessarElementoMatriz3D}!Sculptor@{Sculptor}}
+\subsubsection{\texorpdfstring{AcessarElementoMatriz3D()}{AcessarElementoMatriz3D()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_voxel}{Voxel}} $\ast$ Sculptor\+::\+Acessar\+Elemento\+Matriz3D (\begin{DoxyParamCaption}\item[{int}]{l,  }\item[{int}]{c,  }\item[{int}]{p }\end{DoxyParamCaption})}
+
+metodo auxiliar para acessar um elemento especifico da matriz,z recebe como parametros a linha, coluna e plano e retorna um ponteiro para o voxel que está na coordenada. \mbox{\Hypertarget{class_sculptor_aa84a1b12b09e9e103fc8d78f8d1bc00f}\label{class_sculptor_aa84a1b12b09e9e103fc8d78f8d1bc00f}} 
+\index{Sculptor@{Sculptor}!cutBox@{cutBox}}
+\index{cutBox@{cutBox}!Sculptor@{Sculptor}}
+\subsubsection{\texorpdfstring{cutBox()}{cutBox()}}
+{\footnotesize\ttfamily void Sculptor\+::cut\+Box (\begin{DoxyParamCaption}\item[{int}]{x0,  }\item[{int}]{x1,  }\item[{int}]{y0,  }\item[{int}]{y1,  }\item[{int}]{z0,  }\item[{int}]{z1 }\end{DoxyParamCaption})}
+
+o metodo Recebe os valores de coordenadas x0,x1,y0,y1,z0,z1 e desabilita os voxels da matriz \textquotesingle{}v\textquotesingle{} que estao localizados nos intervalos \mbox{[}x0,x1\mbox{]}, \mbox{[}y0,y1\mbox{]}, \mbox{[}z0,z1\mbox{]}. \mbox{\Hypertarget{class_sculptor_a88491290ab1943b70abb7304df3bb2a9}\label{class_sculptor_a88491290ab1943b70abb7304df3bb2a9}} 
+\index{Sculptor@{Sculptor}!cutEllipsoid@{cutEllipsoid}}
+\index{cutEllipsoid@{cutEllipsoid}!Sculptor@{Sculptor}}
+\subsubsection{\texorpdfstring{cutEllipsoid()}{cutEllipsoid()}}
+{\footnotesize\ttfamily void Sculptor\+::cut\+Ellipsoid (\begin{DoxyParamCaption}\item[{int}]{xcentro,  }\item[{int}]{ycentro,  }\item[{int}]{zcentro,  }\item[{float}]{rx,  }\item[{float}]{ry,  }\item[{float}]{rz }\end{DoxyParamCaption})}
+
+o metodo Recebe o raio na direcao x(rx), o raio na direcao y(ry), o raio na direcao z(rz) os valores de coordenadas xcentro,ycntro,zcentro representando o centro de uma elipsoide e desabilita todos os voxels da matriz \textquotesingle{}v\textquotesingle{} que respeitam a equacao da elipsoide \char`\"{}(x/rx)$\ast$(x/rx) + (y/ry)$\ast$(y/ry)+ (z/rz)$\ast$(z/rz)$<$= 1\char`\"{} onde x,y,z sao coordenadas em relacao a xcentro, ycentro, zcentro. \mbox{\Hypertarget{class_sculptor_ab407b7a2f58a224f3821ebf79830b34d}\label{class_sculptor_ab407b7a2f58a224f3821ebf79830b34d}} 
+\index{Sculptor@{Sculptor}!cutSphere@{cutSphere}}
+\index{cutSphere@{cutSphere}!Sculptor@{Sculptor}}
+\subsubsection{\texorpdfstring{cutSphere()}{cutSphere()}}
+{\footnotesize\ttfamily void Sculptor\+::cut\+Sphere (\begin{DoxyParamCaption}\item[{int}]{xcentro,  }\item[{int}]{ycentro,  }\item[{int}]{zcentro,  }\item[{float}]{raio }\end{DoxyParamCaption})}
+
+o metodo Recebe o raio os valores de coordenadas xcentro,ycntro,zcentro representando o centro de uma esfera e desabilita todos os voxels da matriz \textquotesingle{}v\textquotesingle{} que respeitam a equacao da esfera \char`\"{}x$\ast$x + y$\ast$y+ z$\ast$z$<$= raio$\ast$raio\char`\"{} onde x,y,z sao coordenadas em relacao a xcentro, ycentro, zcentro. \mbox{\Hypertarget{class_sculptor_ad9d714a35fc8ae16d06eb5df37c3493c}\label{class_sculptor_ad9d714a35fc8ae16d06eb5df37c3493c}} 
+\index{Sculptor@{Sculptor}!cutVoxel@{cutVoxel}}
+\index{cutVoxel@{cutVoxel}!Sculptor@{Sculptor}}
+\subsubsection{\texorpdfstring{cutVoxel()}{cutVoxel()}}
+{\footnotesize\ttfamily void Sculptor\+::cut\+Voxel (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{z }\end{DoxyParamCaption})}
+
+o metodo Recebe os valores de coordenadas x,y,z e desabilita o voxel nessa coordenada da matriz \textquotesingle{}v\textquotesingle{}. \mbox{\Hypertarget{class_sculptor_a311ad7a0fb83fc67ac1f378be8e99fe1}\label{class_sculptor_a311ad7a0fb83fc67ac1f378be8e99fe1}} 
+\index{Sculptor@{Sculptor}!putBox@{putBox}}
+\index{putBox@{putBox}!Sculptor@{Sculptor}}
+\subsubsection{\texorpdfstring{putBox()}{putBox()}}
+{\footnotesize\ttfamily void Sculptor\+::put\+Box (\begin{DoxyParamCaption}\item[{int}]{x0,  }\item[{int}]{x1,  }\item[{int}]{y0,  }\item[{int}]{y1,  }\item[{int}]{z0,  }\item[{int}]{z1 }\end{DoxyParamCaption})}
+
+o metodo Recebe os valores de coordenadas x0,x1,y0,y1,z0,z1 e habilita os voxels da matriz \textquotesingle{}v\textquotesingle{} que estao localizados nos intervalos \mbox{[}x0,x1\mbox{]}, \mbox{[}y0,y1\mbox{]}, \mbox{[}z0,z1\mbox{]} atribuindo-\/lhe tbm os valores das cores e tranparencia atuais do objeto sculptor. \mbox{\Hypertarget{class_sculptor_aa776e7910c4fe68230c069bd35defb8f}\label{class_sculptor_aa776e7910c4fe68230c069bd35defb8f}} 
+\index{Sculptor@{Sculptor}!putEllipsoid@{putEllipsoid}}
+\index{putEllipsoid@{putEllipsoid}!Sculptor@{Sculptor}}
+\subsubsection{\texorpdfstring{putEllipsoid()}{putEllipsoid()}}
+{\footnotesize\ttfamily void Sculptor\+::put\+Ellipsoid (\begin{DoxyParamCaption}\item[{int}]{xcentro,  }\item[{int}]{ycentro,  }\item[{int}]{zcentro,  }\item[{float}]{rx,  }\item[{float}]{ry,  }\item[{float}]{rz }\end{DoxyParamCaption})}
+
+o metodo Recebe o raio na direcao x(rx), o raio na direcao y(ry), o raio na direcao z(rz) os valores de coordenadas xcentro,ycntro,zcentro representando o centro de uma elipsoide e habilita todos os voxels da matriz \textquotesingle{}v\textquotesingle{} que respeitam a equacao da elipsoide \char`\"{}(x/rx)$\ast$(x/rx) + (y/ry)$\ast$(y/ry)+ (z/rz)$\ast$(z/rz)$<$= 1\char`\"{} onde x,y,z sao coordenadas em relacao a xcentro, ycentro, zcentro. \mbox{\Hypertarget{class_sculptor_a5c737846a84693fc3e30d61d34702fd1}\label{class_sculptor_a5c737846a84693fc3e30d61d34702fd1}} 
+\index{Sculptor@{Sculptor}!putSphere@{putSphere}}
+\index{putSphere@{putSphere}!Sculptor@{Sculptor}}
+\subsubsection{\texorpdfstring{putSphere()}{putSphere()}}
+{\footnotesize\ttfamily void Sculptor\+::put\+Sphere (\begin{DoxyParamCaption}\item[{int}]{xcentro,  }\item[{int}]{ycentro,  }\item[{int}]{zcentro,  }\item[{float}]{raio }\end{DoxyParamCaption})}
+
+o metodo Recebe o raio os valores de coordenadas xcentro,ycntro,zcentro representando o centro de uma esfera e habilita todos os voxels da matriz \textquotesingle{}v\textquotesingle{} que respeitam a equacao da esfera \char`\"{}x$\ast$x + y$\ast$y+ z$\ast$z$<$= raio$\ast$raio\char`\"{} onde x,y,z sao coordenadas em relacao a xcentro, ycentro, zcentro. o metodo tbm atribui aos voxels os valores das cores e tranparencia atuais do objeto sculptor. \mbox{\Hypertarget{class_sculptor_a4bdea3048b419d58e93074060eaa7b52}\label{class_sculptor_a4bdea3048b419d58e93074060eaa7b52}} 
+\index{Sculptor@{Sculptor}!putVoxel@{putVoxel}}
+\index{putVoxel@{putVoxel}!Sculptor@{Sculptor}}
+\subsubsection{\texorpdfstring{putVoxel()}{putVoxel()}}
+{\footnotesize\ttfamily void Sculptor\+::put\+Voxel (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{z }\end{DoxyParamCaption})}
+
+o metodo Recebe os valores de coordenadas x,y,z e habilita o voxel nessa coordenada da matriz \textquotesingle{}v\textquotesingle{} atribuindo-\/lhe tbm os valores das cores e tranparencia atuais do objeto sculptor. \mbox{\Hypertarget{class_sculptor_af1d69da01379874b0dfd6454787cb562}\label{class_sculptor_af1d69da01379874b0dfd6454787cb562}} 
+\index{Sculptor@{Sculptor}!setColor@{setColor}}
+\index{setColor@{setColor}!Sculptor@{Sculptor}}
+\subsubsection{\texorpdfstring{setColor()}{setColor()}}
+{\footnotesize\ttfamily void Sculptor\+::set\+Color (\begin{DoxyParamCaption}\item[{float}]{r,  }\item[{float}]{g,  }\item[{float}]{b,  }\item[{float}]{alpha }\end{DoxyParamCaption})}
+
+o metodo recebe valores rgbe tranparencia para atualizar as cores e tranparencia que serao utilizadas posteriormente para os voxels manipulados pelas demais funcoes \mbox{\Hypertarget{class_sculptor_a26d31371c76e312b4c0da22fff69532e}\label{class_sculptor_a26d31371c76e312b4c0da22fff69532e}} 
+\index{Sculptor@{Sculptor}!testaEntrada@{testaEntrada}}
+\index{testaEntrada@{testaEntrada}!Sculptor@{Sculptor}}
+\subsubsection{\texorpdfstring{testaEntrada()}{testaEntrada()}}
+{\footnotesize\ttfamily void Sculptor\+::testa\+Entrada (\begin{DoxyParamCaption}\item[{int \&}]{x,  }\item[{int \&}]{y,  }\item[{int \&}]{z }\end{DoxyParamCaption})}
+
+metodo auxiliar para testar se as entradas dos demais metodos sao validas no contexto, se nao forem validas o metodos da o ultimo valor valido para a entrada que extrapola o limite e da zero para valores negativos. \mbox{\Hypertarget{class_sculptor_acec0c5904a80800d43038482a5f4d678}\label{class_sculptor_acec0c5904a80800d43038482a5f4d678}} 
+\index{Sculptor@{Sculptor}!writeOFF@{writeOFF}}
+\index{writeOFF@{writeOFF}!Sculptor@{Sculptor}}
+\subsubsection{\texorpdfstring{writeOFF()}{writeOFF()}}
+{\footnotesize\ttfamily void Sculptor\+::write\+O\+FF (\begin{DoxyParamCaption}\item[{std\+::string}]{A }\end{DoxyParamCaption})}
+
+o metodo Recebe um diretorio e grava um arquivo .off que descreve a imagem formada pela matriz de voxels \mbox{\Hypertarget{class_sculptor_a4981868f3666b04c6b06eb166b1a92cf}\label{class_sculptor_a4981868f3666b04c6b06eb166b1a92cf}} 
+\index{Sculptor@{Sculptor}!writeVECT@{writeVECT}}
+\index{writeVECT@{writeVECT}!Sculptor@{Sculptor}}
+\subsubsection{\texorpdfstring{writeVECT()}{writeVECT()}}
+{\footnotesize\ttfamily void Sculptor\+::write\+V\+E\+CT (\begin{DoxyParamCaption}\item[{std\+::string}]{A }\end{DoxyParamCaption})}
+
+o metodo Recebe um diretorio e grava um arquivo .vect que descreve a imagem formada pela matriz de voxels 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sculptor.\+h\item 
+sculptor.\+cpp\end{DoxyCompactItemize}

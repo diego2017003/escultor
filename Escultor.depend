@@ -9,20 +9,22 @@
 	<iostream>
 	<cstring>
 
-1556491224 source:c:\users\cliente\desktop\escultor\main.cpp
+1556838160 source:c:\users\cliente\desktop\escultor\main.cpp
 	<iostream>
 	"sculptor.h"
 	<cstring>
 
-1556495352 c:\users\cliente\desktop\escultor\sculptor.h
+1556840010 c:\users\cliente\desktop\escultor\sculptor.h
 	<iostream>
 	<string>
 	<cmath>
 	<fstream>
 
-1556490835 source:c:\users\cliente\desktop\escultor\sculptor.cpp
+1556558997 source:c:\users\cliente\desktop\escultor\sculptor.cpp
 	"sculptor.h"
-	<cstring>
+	<string>
 	<iostream>
 	<cmath>
+	<cstdlib>
+	<fstream>
 
